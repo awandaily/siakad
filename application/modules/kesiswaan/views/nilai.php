@@ -247,7 +247,7 @@
 				loading("area_lod");
 			},
 			complete: function() {
-				unblock('area_lod');
+				$('#area_lod').unblock(); 
 			},
 		},
 
@@ -282,7 +282,7 @@
 	function kirim() {
 		$("#formSubmit")[0].reset();
 		$("#judul_mdl").html("INPUT NILAI ");
-		$("#isi").html(data);
+		$("#isi").html("mohon tunggu...");
 		$("#mdl_formSubmit").modal({
 			backdrop: 'static',
 			keyboard: false

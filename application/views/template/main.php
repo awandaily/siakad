@@ -202,9 +202,7 @@ $this->load->view("template/header");
 
   <!--- Back-to-top --->
   <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
-
-  <!--- JQuery min js --->
-  <script src="<?php echo base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
+   
 
   <!--- Bootstrap Bundle js --->
   <script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
