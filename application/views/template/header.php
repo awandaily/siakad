@@ -46,5 +46,5 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/datatables/datatable.js"></script>
 
 
-	 <link href="<?php echo base_url() ?>plug/alertify/alertify.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/alertify/css/alertify.css" rel="stylesheet">
 </head>

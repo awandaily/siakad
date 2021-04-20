@@ -202,7 +202,7 @@ $this->load->view("template/header");
 
   <!--- Back-to-top --->
   <a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
-   
+
 
   <!--- Bootstrap Bundle js --->
   <script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -245,6 +245,7 @@ $this->load->view("template/header");
 
   <!--- Custom js --->
   <script src="<?php echo base_url() ?>assets/js/custom.js"></script>
+  <script src="<?php echo base_url() ?>assets/alertify/alertify.js"></script>
 
 
 </body>
