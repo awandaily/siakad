@@ -63,7 +63,7 @@
  				<div class="bodyd" style=" padding:10px">
  					<!---------------------->
  					<span style="font-size:18px"><?php echo $this->m_reff->goField("tr_hari", "nama", "where id='" . $i . "'"); ?></span>
- 					<table class="table table-striped mg-b-0 text-md-nowrap" width="100%">
+ 					<table class="table table-bordered mg-b-0 text-md-nowrap" width="100%">
  						<tr style='font-size:12px'>
  							<th width="100px">JAM KE </th>
  							<th>MASUK</th>
@@ -86,7 +86,7 @@
 									echo "<tr class='font-bold " . $cls . "' style='background-color:#ababab'>
 									  <td>" . $urut . "</td>
 									  <td>" . substr($val->jam_mulai, 0, 5) . "</td>
-									  <td colspan='2'>" . $val->kegiatan . "</td>
+									  <td colspan='3'>" . $val->kegiatan . "</td>
 									  </tr>";
 								} else {
 									$base = $this->db->query("select * from v_jadwal where id_guru='" . $id_guru . "' 
@@ -108,14 +108,14 @@
 											$kegi = $val->kegiatan;
 											$cls = "bg-grey";
 										} else {
-											$kegi = "<br> <i class='col-orange'>Kosong</i><br>";
+											$kegi = "<i class='col-orange'>Kosong</i>";
 											$cls = "";
 										}
 
 										echo "<tr class='  " . $cls . " font-bold' >
 										  <td>" . $urut . "</td>
 										  <td>" . substr($val->jam_mulai, 0, 5) . "</td>
-										  <td colspan='2'>$kegi</td>						 
+										  <td colspan='3'>$kegi</td>						 
 										  </tr>";
 									}
 								}
