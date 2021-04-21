@@ -3,11 +3,22 @@
 <!-- breadcrumb -->
 <div class="breadcrumb-header justify-content-between">
 	<div>
-		<h4 class="content-title mb-2">Hi, Ini Nilai Pengetahuan dan Keterampilan </h4>
+	<?php
+			$semester = $this->m_reff->semester();
+			$tahun_real = $this->m_reff->tahun_asli();
+			$tahun_kini = $this->m_reff->tahun();
+			if ($tahun_real == $tahun_kini) {
+				$idkelas = $this->m_reff->goField("tm_kelas", "id", "where id_wali='" . $this->mdl->idu() . "'");
+			} else {
+
+				$getIdSiswa = $this->m_reff->goField("tm_catatan_walikelas", "id_siswa", "where _cid='" . $this->mdl->idu() . "' and id_tahun='" . $tahun_kini . "'   limit 1");
+				$idkelas = $this->m_reff->getHisKelas($getIdSiswa);
+			}
+			?>
+		<h4 class="content-title mb-2">DATA NILAI TAHUN AJARAN <?php echo $this->m_reff->tahun_ajaran($tahun_kini); ?></h4>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-				<li class="breadcrumb-item active" aria-current="page"> Nilai</li>
+				
 			</ol>
 		</nav>
 	</div>
@@ -16,22 +27,17 @@
 			<div class="d-flex justify-content-center mr-5">
 				<div class="">
 					<span class="d-block">
-						<span class="label ">Jumlah Nilai</span>
-					</span>
-					<span class="value">
-						Kosong
+					<?php
+					if ($this->m_reff->history_ajaran()) { ?>
+						<button onclick="kirim()" class="text-white border-white btn btn-outline-info btn-rounded btn-block"> INPUT NILAI</button>
+					<?php } ?>
 					</span>
 				</div>
 
 			</div>
 			<div class="d-flex justify-content-center">
 				<div class="">
-					<span class="d-block">
-						<span class="label">Nilai Murid</span>
-					</span>
-					<span class="value">
-						Kosong
-					</span>
+				
 				</div>
 
 			</div>
@@ -46,29 +52,9 @@
 		<div class="card-header pb-0">
 			<div class="demo-button-group">
 				<div class="btn-group pull-right" role="group">
-					<?php
-					if ($this->m_reff->history_ajaran()) { ?>
-						<button onclick="kirim()" class="  waves-effect btn text-white bg-purple"><i class="material-icons">add_circle</i> INPUT NILAI</button>
-					<?php } ?>
 				</div>
-
 			</div>
-
-
-			<?php
-			$semester = $this->m_reff->semester();
-			$tahun_real = $this->m_reff->tahun_asli();
-			$tahun_kini = $this->m_reff->tahun();
-			if ($tahun_real == $tahun_kini) {
-				$idkelas = $this->m_reff->goField("tm_kelas", "id", "where id_wali='" . $this->mdl->idu() . "'");
-			} else {
-
-				$getIdSiswa = $this->m_reff->goField("tm_catatan_walikelas", "id_siswa", "where _cid='" . $this->mdl->idu() . "' and id_tahun='" . $tahun_kini . "'   limit 1");
-				$idkelas = $this->m_reff->getHisKelas($getIdSiswa);
-			}
-			?>
-
-			<h2>DATA NILAI TAHUN AJARAN <?php echo $this->m_reff->tahun_ajaran($tahun_kini); ?></h2>
+			<h2></h2>
 
 		</div>
 		<div class="body">
@@ -119,8 +105,8 @@
 			<div id="area_lod">
 				<div class="bodys">
 					<div class="table-responsive">
-						<table id='tabel' class="tabel table-striped black table-bordered  table-hover dataTable" width="100%">
-							<thead class='sadow bg-teal' style="font-size:12px;width:100%">
+						<table id='tabel' class="table table-bordered mg-b-0 text-md-nowrap" width="100%">
+							<thead class='bg-gray-300' style="font-size:12px;width:100%">
 
 								<tr class='bg-white'>
 									<td colspan="2"> <select class="form-control idknilai show-tick k_nilai<?php echo $token; ?>" id="k_nilai" onchange="selectKate()">

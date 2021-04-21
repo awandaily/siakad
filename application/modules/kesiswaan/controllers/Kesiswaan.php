@@ -420,15 +420,15 @@ class Kesiswaan extends CI_Controller
 			$namakelas = $this->m_reff->goField("v_siswa", "nama_kelas", "where id='" . $dataDB->id_siswa . "'");
 
 			$tombol = '
-                <a target="_blank" href="' . base_url() . 'kesiswaan/download_nilai/' . $dataDB->id . '" title="Download Data" type="button" class="btn col-blue btn-default btn-circle waves-effect waves-circle waves-float">
-			     	<i class="material-icons">get_app</i>
-			    </a>
-			    <button title="Edit data" type="button" onclick="edit(`' . $dataDB->id . '`)" class="btn btn-default btn-circle waves-effect waves-circle waves-float">
-			     	<i class="material-icons">border_color</i>
-			    </button>
-			    <button title="Edit data" type="button" onclick="hapus(`' . $dataDB->id . '`,`' . $dataDB->nama_nilai . '`,`' . $namakelas . '`)" class="btn btn-default btn-circle waves-effect waves-circle waves-float">
-			     	<i class="material-icons">delete_forever</i>
-			    </button>
+		
+					<button data-toggle="dropdown" class="btn btn-indigo btn-block">Pilih Aksi</button>
+					<div class="dropdown-menu">
+						<a href="' . base_url() . 'kesiswaan/download_nilai/' . $dataDB->id . '" class="dropdown-item"> Download</a>
+						<button title="Edit data" type="button" onclick="edit(`' . $dataDB->id . '`)" class="btn btn-default btn-circle">Edit Nilai</button><br>
+						<button title="Edit data" type="button" onclick="hapus(`' . $dataDB->id . '`,`' . $dataDB->nama_nilai . '`,`' . $namakelas . '`)" class="btn btn-default btn-circle waves-effect waves-circle waves-float">Hapus</button>
+					</div>
+					
+	
 			';
 
 			if ($id_semester == 2 and $dataDB->id_kategory_nilai == 3) {
