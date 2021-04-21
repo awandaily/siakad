@@ -447,12 +447,12 @@ class Kesiswaan extends CI_Controller
 			 
 			</span>";
 
-			$row[] = "<span class='size'>  " . $namakelas . "</span>";
+			$row[] = "" . $namakelas . "";
 
-			$row[] = "<span class='size'>  " . $this->m_reff->goField("tr_mapel", "nama", "where id='" . $dataDB->id_mapel . "'") . "</span>";
+			$row[] = "" . $this->m_reff->goField("tr_mapel", "nama", "where id='" . $dataDB->id_mapel . "'") . "";
 
-			$row[] = "<span class='size'>  " . $kikd . "</span>";
-			$row[] = "<span class='size'>  " . $dataDB->nama_nilai . " </span>";
+			$row[] = "" . $kikd . "";
+			$row[] = "" . $dataDB->nama_nilai . "";
 
 			//add html for action
 
