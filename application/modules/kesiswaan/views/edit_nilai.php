@@ -138,6 +138,7 @@
 								<div class="card-body">
 									<div class="d-flex">
 									<table class="table table-bordered">
+									
 									<tr class="bg-blue">
 										<th width="10px">NO</th>
 										<th>NAMA SISWA</th>
