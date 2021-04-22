@@ -15,7 +15,7 @@
                          <!-- Row menu -->
                          <div class="row">
                              <!-- Div menu 1 -->
-                             <div class="col-lg-4 col-md-12 col-xs-12 link-list">
+                             <div class="col-lg-6 col-md-12 col-xs-12 link-list">
                                  <ul>
                                      <li>
                                          <h3 class="fs-14 font-weight-bold mb-1 mt-2">Data Master</h3>
@@ -31,7 +31,7 @@
                              <!-- Akhir dari div menu 1 -->
 
                              <!-- div menu 2 -->
-                             <div class="col-lg-4 col-md-12 col-xs-12 link-list">
+                             <div class="col-lg-6 col-md-12 col-xs-12 link-list">
                                  <ul>
                                      <li>
                                          <h3 class="fs-14 font-weight-bold mb-1 mt-2">Referensi</h3>
@@ -48,21 +48,7 @@
                              </div>
                              <!-- AKhir dari div menu 2 -->
 
-                             <!-- div menu 3 -->
-                             <div class="col-lg-4 col-md-12 col-xs-12 link-list">
-                                 <ul>
-                                     <li>
-                                         <h3 class="fs-14 font-weight-bold mb-1 mt-2">Rekap Data Siswa</h3>
-                                     </li>
-                                     <!-- Isi menu -->
-                                     <li aria-haspopup="true"><a href="<?php echo base_url() ?>master/pendidik" class="slide-item">Staf Pengajar</a></li>
-                                     <li aria-haspopup="true"><a href="<?php echo base_url() ?>master/siswa" class="slide-item">Siswa</a></li>
-                                     <li aria-haspopup="true"><a href="<?php echo base_url() ?>master/migrasi" class="slide-item">Migrasi Siswa</a></li>
-                                     <li aria-haspopup="true"><a href="<?php echo base_url() ?>master/pegawai" class="slide-item">Staf Kepegawaian</a></li>
-                                     <!-- akhir isi menu -->
-                                 </ul>
-                             </div>
-                             <!-- akhir dari div menu 2 -->
+
                          </div>
                          <!-- akhir dari row -->
                      </div>
@@ -89,6 +75,7 @@
                                      <li aria-haspopup="true"><a href="<?php echo base_url() ?>data_pendidik/penjadwalan" class="slide-item">Monitoring Jadwal </a></li>
                                      <li aria-haspopup="true"><a href="<?php echo base_url() ?>data_pendidik/rpp" class="slide-item">File RPP </a></li>
                                      <li aria-haspopup="true"><a href="<?php echo base_url() ?>data_pendidik/rekap_input_nilai" class="slide-item">Rekap Guru Input Nilai</a></li>
+                                     <li aria-haspopup="true"><a href="<?php echo base_url() ?>analisis_data/kompetensi" class="slide-item">Rekap Data Siswa </a></li>
                                      <!-- akhir menu -->
                                  </ul>
                              </div>
