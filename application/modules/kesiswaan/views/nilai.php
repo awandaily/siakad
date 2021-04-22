@@ -474,11 +474,11 @@
 	}
 </script>
 
-<div class="modal fade" id="mdl_edit_nilai" tabindex="-1" role="dialog">
-	<div class="modal-dialog modal-lg" role="document">
+<div class="modal fade" id="mdl_edit_nilai" tabindex="-1"  role="dialog">
+	<div class="modal-dialog modal-lg"  role="document">
 
-		<div class="modal-content"> <span title="tutup" onclick="close_mdl_edit()" class="pull-right waves-effect"><i class="material-icons">cancel</i> </span>
-			<div class="modal-header">
+		<div class="modal-content"> <span title="tutup" onclick="close_mdl_edit()" class="pull-right waves-effect"><i class="cf .icon-close"></i> </span>
+			<div class="modal-header" >
 				<h4 class="modal-title col-teal"> EDIT DATA NILAI </h4>
 			</div>
 			<div class="modal-body">
@@ -494,7 +494,7 @@
 
 
 <div class="modal fade" id="mdl_input" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog" style="width:90 px" role="document">
 
 		<div class="modal-content"> <span title="tutup" onclick="close_mdl()" class="pull-right waves-effect"><i class="material-icons">cancel</i> </span>
 			<div class="modal-header">
