@@ -3,22 +3,22 @@
 <!-- breadcrumb -->
 <div class="breadcrumb-header justify-content-between">
 	<div>
-	<?php
-			$semester = $this->m_reff->semester();
-			$tahun_real = $this->m_reff->tahun_asli();
-			$tahun_kini = $this->m_reff->tahun();
-			if ($tahun_real == $tahun_kini) {
-				$idkelas = $this->m_reff->goField("tm_kelas", "id", "where id_wali='" . $this->mdl->idu() . "'");
-			} else {
+		<?php
+		$semester = $this->m_reff->semester();
+		$tahun_real = $this->m_reff->tahun_asli();
+		$tahun_kini = $this->m_reff->tahun();
+		if ($tahun_real == $tahun_kini) {
+			$idkelas = $this->m_reff->goField("tm_kelas", "id", "where id_wali='" . $this->mdl->idu() . "'");
+		} else {
 
-				$getIdSiswa = $this->m_reff->goField("tm_catatan_walikelas", "id_siswa", "where _cid='" . $this->mdl->idu() . "' and id_tahun='" . $tahun_kini . "'   limit 1");
-				$idkelas = $this->m_reff->getHisKelas($getIdSiswa);
-			}
-			?>
+			$getIdSiswa = $this->m_reff->goField("tm_catatan_walikelas", "id_siswa", "where _cid='" . $this->mdl->idu() . "' and id_tahun='" . $tahun_kini . "'   limit 1");
+			$idkelas = $this->m_reff->getHisKelas($getIdSiswa);
+		}
+		?>
 		<h4 class="content-title mb-2">DATA NILAI TAHUN AJARAN <?php echo $this->m_reff->tahun_ajaran($tahun_kini); ?></h4>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				
+
 			</ol>
 		</nav>
 	</div>
@@ -27,17 +27,17 @@
 			<div class="d-flex justify-content-center mr-5">
 				<div class="">
 					<span class="d-block">
-					<?php
-					if ($this->m_reff->history_ajaran()) { ?>
-						<button onclick="kirim()" class="text-white border-white btn btn-outline-info btn-rounded btn-block"> INPUT NILAI</button>
-					<?php } ?>
+						<?php
+						if ($this->m_reff->history_ajaran()) { ?>
+							<button onclick="kirim()" class="text-white border-white btn btn-outline-info btn-rounded btn-block"> INPUT NILAI</button>
+						<?php } ?>
 					</span>
 				</div>
 
 			</div>
 			<div class="d-flex justify-content-center">
 				<div class="">
-				
+
 				</div>
 
 			</div>
@@ -233,7 +233,7 @@
 				loading("area_lod");
 			},
 			complete: function() {
-				$('#area_lod').unblock(); 
+				$('#area_lod').unblock();
 			},
 		},
 
@@ -474,11 +474,11 @@
 	}
 </script>
 
-<div class="modal fade" id="mdl_edit_nilai" tabindex="-1"  role="dialog">
-	<div class="modal-dialog modal-lg"  role="document">
+<div class="modal fade" id="mdl_edit_nilai" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
 
-		<div class="modal-content"> <span title="tutup" onclick="close_mdl_edit()" class="pull-right waves-effect"><i class="cf .icon-close"></i> </span>
-			<div class="modal-header" >
+		<div class="modal-content"> <span title="tutup" onclick="close_mdl_edit()" class="pull-right waves-effect"><i class="">cancel</i> </span>
+			<div class="modal-header">
 				<h4 class="modal-title col-teal"> EDIT DATA NILAI </h4>
 			</div>
 			<div class="modal-body">
@@ -494,9 +494,9 @@
 
 
 <div class="modal fade" id="mdl_input" tabindex="-1" role="dialog">
-	<div class="modal-dialog" style="width:90 px" role="document">
+	<div class="modal-dialog modal-lg" style="width:90 px" role="document">
 
-		<div class="modal-content"> <span title="tutup" onclick="close_mdl()" class="pull-right waves-effect"><i class="material-icons">cancel</i> </span>
+		<div class="modal-content"> <span title="tutup" onclick="close_mdl()" class="pull-right waves-effect"><i class="btn -btn">X</i> </span>
 			<div class="modal-header">
 				<h4 class="modal-title col-teal"> INPUT NILAI </h4>
 			</div>
@@ -610,8 +610,8 @@
 						<div class="row" align="center">
 							<div class="demo-button-groups">
 								<div class="btn-group" role="group">
-									<button type="button" onclick="import_data()" class="btn bg-teal waves-effect waves-light">IMPORT Ms.Excell</button>
-									<button type="button" onclick="input()" class="btn bg-blue-grey waves-effect waves-light">INPUT LANGSUNG</button>
+									<button type="button" onclick="import_data()" class="btn btn-indigo waves-effect waves-light">IMPORT Ms.Excell</button>
+									<button type="button" onclick="input()" class="btn btn-primary waves-effect waves-light">INPUT LANGSUNG</button>
 								</div>
 
 							</div>
@@ -678,11 +678,7 @@
 							</div>
 						</div><br>
 						<div class="row">
-
-
-
 							<div class="col-md-12" id="hasilKelasInput" style="padding-bottom:15px">
-
 								<select class="form-control show-tick" id="mapel" required name="f[id_mapel]">
 									<option value="">--- Pilih Mata Pelajaran ---</option>
 									<!--
@@ -784,17 +780,11 @@
 	}
 </script>
 
-
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="mdl_formSubmitDown" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog" id="area_formSubmitDown">
 		<div class="modal-content ">
 			<form id="formSubmitDown" action="javascript:submitForm('formSubmitDown')" method="post">
-
 				<!-- Modal Header -->
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">
@@ -805,11 +795,10 @@
 						IMPORT DATA NILAI
 					</h4>
 				</div>
-
 				<!-- Modal Body -->
 				<div class="modal-body">
 					<div class="col-md-12 body">
-						<center> <span class="sound col-blue cursor" target='_blank' onclick="downloadForm()">Download Format Upload</span> </center>
+						<center><span class="sound col-blue cursor" target='_blank' onclick="downloadForm()">Download Format Upload</span> </center>
 
 						<div class="row">
 
@@ -817,8 +806,6 @@
 								<input type="file" accept="xlsx" class="form-control" name="file" required />
 							</div>
 						</div><br>
-
-
 					</div>
 				</div>
 				<div class="row clearfix"></div>

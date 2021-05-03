@@ -3,11 +3,11 @@
  <!-- breadcrumb -->
  <div class="breadcrumb-header justify-content-between">
    <div>
-     <h4 class="content-title mb-2">Rekapitulasi </h4>
+     <h4 class="content-title mb-2">Agenda KBM </h4>
      <nav aria-label="breadcrumb">
        <ol class="breadcrumb">
-         <li class="breadcrumb-item"><a href="#">Rekapitulasi</a></li>
-         <li class="breadcrumb-item active" aria-current="page"> Riwayat Mengajar</li>
+         <li class="breadcrumb-item"><a href="#"></a></li>
+         <li class="" aria-current="page"> </li>
        </ol>
      </nav>
    </div>
@@ -21,7 +21,7 @@
    <div class="card">
      <div class="header">
        <div class="col-md-5 col-xs-12" style="padding-bottom:15px">
-         <h2 style='font-size:16px'>Agenda KBM</h2>
+         <h2 style='font-size:16px'></h2>
        </div>
        <div class="col-md-4" style="padding-bottom:5px">
          <select class="form-control show-tick id_kelas<?php echo $token; ?>" id="fkelas" onchange="reload_table()">
@@ -38,26 +38,23 @@
 
          <input id="ftanggal" readonly class="cursor form-control col-md-12 col-xs-12" type="text" onchange="reload_table()">
        </div>
-
        <br>
      </div>
-
      <!----->
-     <div class="card">
+     <div class="col-xl-12">
+		<div class="card">
+     
        <div class="body" id="area_lod">
          <div class="table-responsive">
-           <table id='table' class="tabel black table-bordered  table-hover dataTable" style="font-size:12px;width:100%">
-             <thead class='sadow bg-teal'>
-               <th class='thead' width="100px">HAPUS</th>
-               <th class='thead' style='min-width:80px'>ABSEN</th>
-
-               <th class='thead'>TANGGAL</th>
-               <th class='thead'> KELAS</th>
-               <th class='thead'>MAPEL</th>
-               <th class='thead'>KD</th>
-
-               <th class='thead'>PEMBAHASAN</th>
-
+           <table id='table' class="table table-hover table-bordered mb-0 text-md-nowrap text-lg-nowrap text-xl-nowrap table-striped " style="font-size:12px;width:100%">
+             <thead >
+               <th>HAPUS</th>
+                <th width="100px">ABSEN</th>
+                <th>TANGGAL</th>
+                <th>KELAS</th>
+                <th>MAPEL</th>
+                <th>KD</th>
+                <th>PEMBAHASAN</th>
 
              </thead>
            </table>

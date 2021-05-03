@@ -389,16 +389,16 @@ class Kbm extends CI_Controller
 			////
 			$nama = $this->m_reff->goField("data_siswa", "nama", "where id='" . $dataDB->id . "' ");
 			$hapus = '       
-                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle waves-effect waves-circle waves-float" onclick="hapus(`' . $dataDB->id . '`)" title="Delete">
+                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle " onclick="hapus(`' . $dataDB->id . '`)" title="Delete">
                                         <i class="material-icons">delete_forever</i> 
                                     </button>
-                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle waves-effect waves-circle waves-float" onclick="edit(`' . $dataDB->id . '`)" title="Edit">
+                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle " onclick="edit(`' . $dataDB->id . '`)" title="Edit">
                                         <i class="material-icons">border_color</i> 
                                     </button>
                                     ';
 			$tombol = '       
-                                    <button type="button" ' . $disable . ' class="btn bg-teal waves-effect" onclick="absen_siswa_rekap(`' . $dataDB->id_kelas . '`,`' . $dataDB->id_jadwal . '`,`' . substr($dataDB->tgl, 0, 10) . '`,`' . $dataDB->id_mapel . '`)">
-                                        Absen Siswa 
+                                    <button type="button" ' . $disable . ' class="btn btn-secondary btn-rounded btn-block" onclick="absen_siswa_rekap(`' . $dataDB->id_kelas . '`,`' . $dataDB->id_jadwal . '`,`' . substr($dataDB->tgl, 0, 10) . '`,`' . $dataDB->id_mapel . '`)">
+                                 Absen Siswa 
                                     </button>
                                     ';
 			$vv = $this->db->get_where("v_materi", array("id" => $dataDB->id_materi))->row();
@@ -421,12 +421,12 @@ class Kbm extends CI_Controller
 			$row[] = $hapus;
 			$row[] = $tombol;
 			///$row[] = "<span class='size'>".$no++."</span>";	
-			$row[] = "<span class='size'>  " . $this->tanggal->hariLengkap(substr($dataDB->tgl, 0, 10), "/") . " </span>";
-			$row[] = "<span class='size'>  " . $this->m_reff->goField("v_kelas", "nama", "where id='" . $dataDB->id_kelas . "'") . " </span>";
-			$row[] = "<span class='size'>  " . $this->m_reff->goField("tr_mapel", "nama", "where id='" . $dataDB->id_mapel . "'") . " </span>";
-			$row[] = "<span class='size'>  " . $dataDB->kode_kd . "</span>";
+			$row[] = "" . $this->tanggal->hariLengkap(substr($dataDB->tgl, 0, 10), "/") . " ";
+			$row[] = "" . $this->m_reff->goField("v_kelas", "nama", "where id='" . $dataDB->id_kelas . "'") . "";
+			$row[] = " " . $this->m_reff->goField("tr_mapel", "nama", "where id='" . $dataDB->id_mapel . "'") . "";
+			$row[] = "" . $dataDB->kode_kd . "";
 			//	$row[] = "<span class='size'>  ".$this->m_reff->goField("tm_materi","materi","where id='".$dataDB->id_materi."'")." </span>";
-			$row[] = "<span class='size'>  " . $ket . " </span>";
+			$row[] = "" . $ket . "";
 
 			$data[] = $row;
 		}
