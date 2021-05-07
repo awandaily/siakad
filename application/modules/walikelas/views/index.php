@@ -1,11 +1,9 @@
 <!-- breadcrumb -->
 <div class="breadcrumb-header justify-content-between">
 	<div>
-		<h4 class="content-title mb-2">Hi, Ini Nilai Pengetahuan dan Keterampilan </h4>
+		<h4 class="content-title mb-2">Absensi Harian Siswa </h4>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-				<li class="breadcrumb-item active" aria-current="page"> Nilai</li>
 			</ol>
 		</nav>
 	</div>
@@ -37,10 +35,12 @@
 	</div>
 </div>
 <!-- /breadcrumb -->
-
+<div class="col-md-12 col-xl-12">
+							<div class="card overflow-hidden review-project">
+		<div class="card">
+			<div class="body">
+				<div class="table-responsive">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="laphar">
-
-
 	<div>
 		<div class="body entry">
 			<div class="row clearfix">

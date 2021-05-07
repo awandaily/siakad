@@ -389,16 +389,16 @@ class Kbm extends CI_Controller
 			////
 			$nama = $this->m_reff->goField("data_siswa", "nama", "where id='" . $dataDB->id . "' ");
 			$hapus = '       
-                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle " onclick="hapus(`' . $dataDB->id . '`)" title="Delete">
+                                    <button type="button" ' . $disable . ' class="btn btn-danger btn-block " onclick="hapus(`' . $dataDB->id . '`)" title="Delete">
                                         <i class="material-icons">delete_forever</i> 
                                     </button>
-                                    <button type="button" ' . $disable . ' class="btn btn-default btn-circle " onclick="edit(`' . $dataDB->id . '`)" title="Edit">
+                                    <button type="button" ' . $disable . ' class="btn btn-info btn-block" onclick="edit(`' . $dataDB->id . '`)" title="Edit">
                                         <i class="material-icons">border_color</i> 
                                     </button>
                                     ';
 			$tombol = '       
-                                    <button type="button" ' . $disable . ' class="btn btn-secondary btn-rounded btn-block" onclick="absen_siswa_rekap(`' . $dataDB->id_kelas . '`,`' . $dataDB->id_jadwal . '`,`' . substr($dataDB->tgl, 0, 10) . '`,`' . $dataDB->id_mapel . '`)">
-                                 Absen Siswa 
+                                    <button type="button" ' . $disable . ' class="btn btn-danger btn-block" onclick="absen_siswa_rekap(`' . $dataDB->id_kelas . '`,`' . $dataDB->id_jadwal . '`,`' . substr($dataDB->tgl, 0, 10) . '`,`' . $dataDB->id_mapel . '`)">
+                                 Absen Siswa
                                     </button>
                                     ';
 			$vv = $this->db->get_where("v_materi", array("id" => $dataDB->id_materi))->row();
@@ -419,7 +419,7 @@ class Kbm extends CI_Controller
 
 			$row = array();
 			$row[] = $hapus;
-			$row[] = $tombol;
+			$row[] =$tombol;
 			///$row[] = "<span class='size'>".$no++."</span>";	
 			$row[] = "" . $this->tanggal->hariLengkap(substr($dataDB->tgl, 0, 10), "/") . " ";
 			$row[] = "" . $this->m_reff->goField("v_kelas", "nama", "where id='" . $dataDB->id_kelas . "'") . "";

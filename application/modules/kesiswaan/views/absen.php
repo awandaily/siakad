@@ -1,11 +1,11 @@
  					<!-- breadcrumb -->
  					<div class="breadcrumb-header justify-content-between">
  						<div>
- 							<h4 class="content-title mb-2">Rekapitulasi </h4>
+ 							<h4 class="content-title mb-2">Rekapitulasi Absen </h4>
  							<nav aria-label="breadcrumb">
  								<ol class="breadcrumb">
- 									<li class="breadcrumb-item"><a href="#">Rekapitulasi</a></li>
- 									<li class="breadcrumb-item active" aria-current="page"> Absen Permapel</li>
+ 									<li class="breadcrumb-item"><a href="#"></a></li>
+ 									<li ></li>
  								</ol>
  							</nav>
  						</div>
@@ -23,8 +23,6 @@
  								<div class="col-md-9">
  									<select id="idkelas" name="idkelas" class="form-control show-tick " onchange="getNilai()">
  										<option value="">=== Pilih Kelas / Mapel ===</option>
-
-
  										<?php
 											$db = $this->mdl->mapelAjar();
 											foreach ($db as $val) {

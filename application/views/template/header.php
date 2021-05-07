@@ -44,7 +44,7 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/datatables/pdf.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/datatables/font.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/datatables/datatable.js"></script>
-
-
-    <link href="<?php echo base_url() ?>assets/alertify/css/alertify.css" rel="stylesheet">
+   <link type="text/css" href="<?php echo base_url() ?>assets/alertify/css/alertify.css" rel="stylesheet">
+   <script src="<?php echo base_url() ?>assets/alertify/alertify.js"></script>
+ 
 </head>

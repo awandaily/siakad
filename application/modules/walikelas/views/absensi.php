@@ -2,40 +2,63 @@
  <!-- breadcrumb -->
  <div class="breadcrumb-header justify-content-between">
  	<div>
- 		<h4 class="content-title mb-2">Hi, Ini Rekap Absen Tiap Pertemuan </h4>
+ 		<h4 class="content-title mb-2">Rekap Absen Setiap Pertemuan</h4>
  		<nav aria-label="breadcrumb">
  			<ol class="breadcrumb">
- 				<li class="breadcrumb-item"><a href="#">Walikelas</a></li>
- 				<li class="breadcrumb-item active" aria-current="page"> Rekap Absen Tiap Pertemuan</li>
+ 				<!--<li class="breadcrumb-item"><a href="#">Walikelas</a></li>
+ 				<li class="breadcrumb-item active" aria-current="page"> Rekap Absen Tiap Pertemuan</li> -->
  			</ol>
  		</nav>
  	</div>
+	 <div class="d-flex my-auto">
+		<div class=" d-flex right-page">
+			<div class="d-flex justify-content-center mr-5">
+				<div class="">
+					<span class="d-block">
+						
+							<button onclick="" class="text-white border-white btn btn-outline-info btn-rounded btn-block"> Download Excel</button>
 
+					</span>
+				</div>
+
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="">
+
+				</div>
+
+			</div>
+		</div>
+	</div>
  </div>
  <!-- /breadcrumb -->
 
 
  <!-- Task Info -->
- <<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
  	<div class="card">
  		<div class="header row">
  			<div class="col-md-12">
- 				<h2 style='font-size:16px'><b>Ketidakhadiran Siswa Per-Pertemuan Bukan Perhari</b></h2>
+ 				<!--<h2 style='font-size:16px'><b>Ketidakhadiran Siswa Per-Pertemuan Bukan Perhari</b></h2>-->
  			</div>
 
 
  		</div>
 
  		<!----->
+		
+						<div class="col-md-12 col-xl-12">
+							<div class="card overflow-hidden review-project">
+								
  		<div class="card">
  			<div class="body">
  				<div class="table-responsive">
- 					<table id='table' class="tabel black table-bordered  table-hover dataTable" style="font-size:12px;width:100%">
- 						<thead class='sadow bg-teal'>
- 							<th class='thead'>NO</th>
- 							<th class='thead'>SISWA</th>
+ 					<table id='table' class="table table-hover table-bordered mb-0 text-md-nowrap text-lg-nowrap text-xl-nowrap table-striped">
+ 						<thead>
+ 							<th>NO</th>
+ 							<th>SISWA</th>
 
- 							<th class='thead'>TOTAL</th>
+ 							<th>TOTAL</th>
 
  							<?php
 								$this->db->where("id!=", 1);

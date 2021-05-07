@@ -31,7 +31,7 @@
  					<h2 style='font-size:15px'>Input Nilai Sikap</h2>
  				</div>
  				<div class="col-md-10">
- 					<select id="idkelas" name="idkelas" class="form-control show-tick " onchange="getNilai()">
+ 					<select id="idkelas" name="idkelas" class="form-control select2-no-search" onchange="getNilai()">
  						<option value="">=== Pilih Kelas / Mapel ===</option>
 
 

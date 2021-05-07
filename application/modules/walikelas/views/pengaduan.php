@@ -2,19 +2,57 @@
  
  
                 <div class="row clearfix" id="area_lod">
-                <!-- Task Info -->
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <div class="header row">
-                         <div class="col-md-12 "   >     <h2 style='font-size:16px'><b>Catatan Siswa</b></h2> </div>
-						  
-					 
-                        </div>
-                       
-                           <!----->
-				 <div class="card">
-                        <div class="body">
-                            <div class="table-responsive">
+				<div class="breadcrumb-header justify-content-between">
+	<div>
+		<h4 class="content-title mb-2">Rekap Absen Harian </h4>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				
+			</ol>
+		</nav>
+	</div>
+	<div class="d-flex my-auto">
+		<div class=" d-flex right-page">
+			<div class="d-flex justify-content-center mr-5">
+				<div class="">
+					<span class="d-block">
+						
+							<button onclick="" class="text-white border-white btn btn-outline-info btn-rounded btn-block"> Download Excel</button>
+
+					</span>
+				</div>
+
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="">
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /breadcrumb -->
+
+
+<!-- Task Info -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ 	<div class="card">
+ 		<div class="header row">
+ 			<div class="col-md-12">
+ 				<!--<h2 style='font-size:16px'><b>Ketidakhadiran Siswa Per-Pertemuan Bukan Perhari</b></h2>-->
+ 			</div>
+
+
+ 		</div>
+
+ 		<!----->
+		
+						<div class="col-md-12 col-xl-12">
+							<div class="card overflow-hidden review-project">
+		<div class="card">
+			<div class="body">
+				<div class="table-responsive">
                                <table id='table' class="tabel black table-bordered  table-hover dataTable" style="font-size:12px;width:100%">
 								<thead  class='sadow bg-teal'>			
 								 
@@ -31,8 +69,7 @@
 					</div>	
                            <!----->
                     
-                    </div>
-                </div>
+           
                 <!-- #END# Task Info -->
 			<script>	
 			function detail(id)

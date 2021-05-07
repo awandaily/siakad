@@ -49,7 +49,7 @@
            <table id='table' class="table table-hover table-bordered mb-0 text-md-nowrap text-lg-nowrap text-xl-nowrap table-striped " style="font-size:12px;width:100%">
              <thead >
                <th>HAPUS</th>
-                <th width="100px">ABSEN</th>
+                <th>ABSEN</th>
                 <th>TANGGAL</th>
                 <th>KELAS</th>
                 <th>MAPEL</th>
