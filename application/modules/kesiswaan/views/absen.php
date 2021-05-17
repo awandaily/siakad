@@ -9,7 +9,41 @@
  								</ol>
  							</nav>
  						</div>
+					 	<div class="d-flex my-auto">
+		<div class=" d-flex right-page">
+			<div class="d-flex justify-content-center mr-5">
+				<div class="">
+					<span class="d-block">
+						<span class="label "></span>
+					</span>
+					
+					<select id="idkelas" name="idkelas" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block form-control show-tick " onchange="getNilai()">
+ 										<option value="">=== Pilih Kelas / Mapel ===</option>
+ 										<?php
+											$db = $this->mdl->mapelAjar();
+											foreach ($db as $val) {
+												echo "<option value='" . $val->id . "'>Kelas :" . strtolower($val->kelas) . " || Mapel :" . strtolower($val->mapel) . "</option>";
+											}
+											?>
 
+ 									</select>
+					
+				</div>
+
+			</div>
+			<div class="d-flex justify-content-center">
+				<div class="">
+					<span class="d-block">
+						<span class="label"></span>
+					</span>
+					<span class="value">
+          <button onclick="" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block"> Download Excel</button>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
  					</div>
  					<!-- /breadcrumb -->
 
@@ -17,7 +51,7 @@
  					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
  						<div class="card">
  							<div class="header row">
- 								<div class="col-md-3 col-teal" style="padding-bottom:15px">
+ 								<!-- <div class="col-md-3 col-teal" style="padding-bottom:15px">
  									<h2 class='col-teal' style='font-size:16px'>Rekapitulasi Absen</h2>
  								</div>
  								<div class="col-md-9">

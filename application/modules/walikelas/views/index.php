@@ -3,7 +3,7 @@
 	<div>
 		<h4 class="content-title mb-2">Absensi Harian Siswa </h4>
 		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
+			<ol class="breadcrumb"> 
 			</ol>
 		</nav>
 	</div>
@@ -12,21 +12,19 @@
 			<div class="d-flex justify-content-center mr-5">
 				<div class="">
 					<span class="d-block">
-						<span class="label ">Jumlah Nilai</span>
+						<span class="label "></span>
 					</span>
-					<span class="value">
-						Kosong
-					</span>
+					<input required value="Pencarian Tanggal" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block" type="text" id="tgl" autocomplete="off" name="tgl" class="form-control cursor" onchange="load_absen()">
 				</div>
 
 			</div>
 			<div class="d-flex justify-content-center">
 				<div class="">
 					<span class="d-block">
-						<span class="label">Nilai Murid</span>
+						<span class="label"></span>
 					</span>
 					<span class="value">
-						Kosong
+         			 <button onclick="" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block"> Download Excel</button>
 					</span>
 				</div>
 
@@ -34,6 +32,7 @@
 		</div>
 	</div>
 </div>
+</div><div>
 <!-- /breadcrumb -->
 <div class="col-md-12 col-xl-12">
 							<div class="card overflow-hidden review-project">
@@ -57,7 +56,10 @@
 
 	<div id="dt" style="margin-top:10px"></div>
 </div>
-
+</div>
+</div>
+</div></div>
+</div>
 
 
 <script>

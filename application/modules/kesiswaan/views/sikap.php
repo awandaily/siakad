@@ -17,8 +17,40 @@
  			</ol>
  		</nav>
  	</div>
- 	<div class="d-flex my-auto">
- 		< </div>
+	 <div class="d-flex my-auto">
+		<div class=" d-flex right-page">
+			<div class="d-flex justify-content-center mr-5">
+				
+					<select class="text-white border-white btn btn-outline-indigo btn-rounded btn-block" id="idkelas" name="idkelas" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block form-control select2-no-search" onchange="getNilai()">
+ 						<option value="">=== Pilih Kelas / Mapel ===</option>
+
+
+ 						<?php
+							$db = $this->mdl->mapelAjarSikap();
+							foreach ($db as $val) {
+
+								$idsikap = $this->m_reff->goField("tr_mapel", "id_sikap", "WHERE id='" . $val->id_mapel . "' ");
+
+								if ($idsikap == "1") {
+									echo "<option value='" . $val->id . "'>Kelas :" . strtolower($val->kelas) . " || Mapel :" . strtolower($val->mapel) . "</option>";
+								}
+							}
+							?>
+
+ 					</select>
+					
+				
+
+			</div>
+			<div class="d-flex justify-content-center">
+				
+          <button onclick="" class="text-white border-white btn btn-outline-indigo btn-rounded btn-block"> Download Excel</button>
+				
+				</div>
+
+			</div>
+		</div>
+	</div>
  	</div>
  	<!-- /breadcrumb -->
 
@@ -27,7 +59,7 @@
  	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
  		<div class="card">
  			<div class="header row">
- 				<div class="col-md-2" style="padding-bottom:15px">
+ 				<!--<div class="col-md-2" style="padding-bottom:15px">
  					<h2 style='font-size:15px'>Input Nilai Sikap</h2>
  				</div>
  				<div class="col-md-10">
@@ -48,7 +80,7 @@
 							?>
 
  					</select>
- 				</div>
+ 				</div>-->
  				<!--	<div class="col-md-5"  >
                                         
 								 

@@ -61,7 +61,7 @@
 		</div>
 	</div>
 	<!-- #END# Task Info -->
-</div>
+	</div></div></div>
 
 
 <div class="modal fade" id="mdl_modal" tabindex="-1" role="dialog">

@@ -75,7 +75,7 @@
  		</div>
  		<!----->
 
- 	</div>
+ 	</div>	</div>	</div>
  	</>
  	<!-- #END# Task Info -->
 

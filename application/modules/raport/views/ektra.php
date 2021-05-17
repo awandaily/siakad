@@ -1,14 +1,56 @@
-               <div class="row clearfix">
+                <!-- breadcrumb -->
+                <div class="breadcrumb-header justify-content-between">
+                	<div>
+                		<h4 class="content-title mb-2">Report Ekstrakulikuller </h4>
+                		<nav aria-label="breadcrumb">
+                			<ol class="breadcrumb">
+                			</ol>
+                		</nav>
+                	</div>
+                	<div class="d-flex my-auto">
+                		<div class=" d-flex right-page">
+                			<div class="d-flex justify-content-center mr-5">
+                				<div class="">
+                					<span class="d-block">
+                						<span class="label "></span>
+                					</span>
+
+                				</div>
+
+                			</div>
+                			<div class="d-flex my-auto">
+                				<div class=" d-flex right-page">
+                					<div class="d-flex justify-content-center mr-5">
+                						<div class="">
+                							<span class="d-block">
+											<?php
+                        if($this->m_reff->tahun_sts()=="true"){?>
+                        
+				 	 <button onclick='add()' 
+						 class='text-white border-white btn btn-outline-indigo btn-rounded btn-block'>Tambah Ektrakurikuler</button>
+                 <?php } ?>
+                							</span>
+                						</div>
+
+                					</div>
+                					<div class="d-flex justify-content-center">
+                						<div class="">
+
+                						</div>
+
+                					</div>
+                				</div>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+                <!-- /breadcrumb -->
+
+
                 <!-- Task Info -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="card" >
                         <div class="header"> 
-						
-						
-                      
-						
-						
-						<h2 class="sound">DATA SISWA</h2>
                               <?php  
                                $semester=$this->m_reff->semester();
                              	$tahun_real=$this->m_reff->tahun_asli();
@@ -36,19 +78,20 @@
                  <?php } ?>
 						
 						</div>
-						    <div class="body">
-                        			 <div id="area_lod">
-			            <div class="bodys">
-                            <div class="table-responsive">
-                             <table id='tabel' class="tabel table-striped black table-bordered  table-hover dataTable"  style="font-size:12px;width:100%" >
-								<thead  class='sadow bg-teal' >			
-									<th class='thead' style='max-width:3px'>NO</th>
+						
+						<div class="col-md-12 col-xl-12">
+							<div class="card overflow-hidden review-project">
+								<div class="card-body">
+								<div class="table-responsive mb-0">
+                             <table id='tabel' class="table table-hover table-bordered mb-0 text-md-nowrap text-lg-nowrap text-xl-nowrap table-striped" >
+								<thead  >			
+									<th>NO</th>
 								 
-									<th class='thead' style='min-width:125px'   >NAMA</th>
+									<th>NAMA</th>
 								 
-									<th class='thead' >NIS</th>
+									<th >NIS</th>
 									 
-									<th class='thead'  >  EKTRAKURIKULER </th>
+									<th>  EKTRAKURIKULER </th>
 								 
 								  	
 							 		</thead>

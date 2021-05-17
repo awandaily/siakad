@@ -1,15 +1,46 @@
                 <!-- breadcrumb -->
                 <div class="breadcrumb-header justify-content-between">
                 	<div>
-                		<h4 class="content-title mb-2">Hi, Ini Rekap Absen Tiap Pertemuan </h4>
+                		<h4 class="content-title mb-2">Report Prestasi Siswa </h4>
                 		<nav aria-label="breadcrumb">
                 			<ol class="breadcrumb">
-                				<li class="breadcrumb-item"><a href="#">Walikelas</a></li>
-                				<li class="breadcrumb-item active" aria-current="page"> Rekap Absen Tiap Pertemuan</li>
                 			</ol>
                 		</nav>
                 	</div>
+                	<div class="d-flex my-auto">
+                		<div class=" d-flex right-page">
+                			<div class="d-flex justify-content-center mr-5">
+                				<div class="">
+                					<span class="d-block">
+                						<span class="label "></span>
+                					</span>
 
+                				</div>
+
+                			</div>
+                			<div class="d-flex my-auto">
+                				<div class=" d-flex right-page">
+                					<div class="d-flex justify-content-center mr-5">
+                						<div class="">
+                							<span class="d-block">
+											<?php
+							if ($this->m_reff->tahun_sts() == "false") { ?>
+                				<button onclick='add()' class="text-white border-white btn btn-outline-indigo btn-rounded btn-block"> TAMBAHKAN PRESTASI</button>
+                			<?php } ?>
+                							</span>
+                						</div>
+
+                					</div>
+                					<div class="d-flex justify-content-center">
+                						<div class="">
+
+                						</div>
+
+                					</div>
+                				</div>
+                			</div>
+                		</div>
+                	</div>
                 </div>
                 <!-- /breadcrumb -->
 
@@ -18,12 +49,6 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 	<div class="card">
                 		<div class="header">
-
-
-
-
-
-                			<h2 class="sound">DATA SISWA</h2>
                 			<?php
 							$semester = $this->m_reff->semester();
 							$tahun_real = $this->m_reff->tahun_asli();
@@ -44,26 +69,26 @@
 														} ?></b>
 
 
-                			<?php
+                			<!--<?php
 							if ($this->m_reff->tahun_sts() == "false") { ?>
                 				<button onclick='add()' class='pull-right col-md-2 col-xs-12  waves-effect bg-teal  btn'>Tambahkan Prestasi</button>
-                			<?php } ?>
+                			<?php } ?> -->
 
                 		</div>
-                		<div class="body">
-                			<div id="area_lod">
-                				<div class="bodys">
-                					<div class="table-responsive">
-                						<table id='tabel' class="tabel table-striped black table-bordered  table-hover dataTable" style="font-size:12px;width:100%">
-                							<thead class='sadow bg-teal'>
-                								<th class='thead' style='max-width:3px'>NO</th>
+                		<div class="col-md-12 col-xl-12">
+							<div class="card overflow-hidden review-project">
+								<div class="card-body">
+								<div class="table-responsive mb-0">
+                						<table id='tabel' class="table table-hover table-bordered mb-0 text-md-nowrap text-lg-nowrap text-xl-nowrap table-striped ">
+                							<thead>
+											
+                							<th>NO</th>
 
-                								<th class='thead' style='min-width:125px'>NAMA</th>
+                								<th>NAMA</th>
 
-                								<th class='thead'>NIS</th>
+                								<th>NIS</th>
 
-                								<th class='thead'> PRESTASI </th>
-
+                								<th> PRESTASI </th>
 
                 							</thead>
                 						</table>
@@ -72,12 +97,9 @@
                 			</div>
                 			<!----->
                 		</div>
-                	</div>
+                	
                 </div>
                 <!-- #END# Task Info -->
-
-
-
 
                 <script type="text/javascript">
                 	var dataTable = $('#tabel').DataTable({
@@ -185,11 +207,6 @@
                 			$("#modal_tinjau").modal();
                 		});
                 	}
-
-
-
-
-
                 	function detail(id) {
                 		$("#judul_mdl_detail").html("DATA DETAIL SISWA ");
                 		$("#mdl_detail").modal();
@@ -282,8 +299,6 @@
                 						</div>
                 					</div>
 
-
-
                 					<label for="email_address" class="col-black" style="padding-top:10px;">Jenis Prestasi</label>
                 					<div class="form-group">
                 						<div class="form-line">
@@ -305,25 +320,16 @@
 
                 				</div>
                 				<div class="modal-footer">
-                					<button onclick="submitForm(`formSubmit`)" class="waves-effect btn col-white   bg-teal "><i class="material-icons">save</i> SIMPAN</button>
+                					<button onclick="submitForm(`formSubmit`)" class="waves-effect btn col-white   bg-teal "><i class="far fa-address-book"></i> SIMPAN</button>
 
                 				</div>
                 			</form>
                 		</div>
                 	</div>
                 </div>
-
-
-
-
-
                 <script>
                 	//	$('select').selectpicker();
                 </script>
-
-
-
-
                 <!-- Modal -->
                 <div class="modal fade" id="mdl_detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 	<div class="modal-dialog modal-lg">
